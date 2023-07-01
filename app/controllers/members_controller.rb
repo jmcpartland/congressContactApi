@@ -5,6 +5,7 @@ class MembersController < ApplicationController
     render json: members
   end
 
+
   def members_by_state
     members = Member.where(:state => params[:state]).to_a
     if members
